@@ -6,11 +6,11 @@ from appfinal.models import *
 def inicio(request):
     return render(request,"appfinal/index.html")
 def candidatos(request):
-    return HttpResponse("Estas en candidatos")
+    return render(request,"appfinal/candidatos.html")
 def recomendadores(request):
-    return HttpResponse("Estas en recomendadores")
+    return render(request,"appfinal/recomendadores.html")
 def reclutadores(request):
-    return HttpResponse("Estas en reclutadores")
+    return render(request,"appfinal/reclutadores.html")
 def clientes(request):
-    return HttpResponse("Estas en clientes")
+    return render(request,"appfinal/clientes.html")
 # Create your views here.
