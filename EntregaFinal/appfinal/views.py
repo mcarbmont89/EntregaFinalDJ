@@ -51,6 +51,17 @@ def alta_clientes(request):
         cliente = Clientes(nombreempresa=nombre_empresa,descempresa=desc_empresa,ofertaactiva=oferta_activa)
         cliente.save()
     return render(request,"appfinal/clientes_form.html")
+
+def profesion_candidato(request):
+    return render(request,"appfinal/busqueda_candidatos.html")
+    
+def resultado_candidato(request):
+    profesion_candidato=request.GET("profesion_candidato")
+    candidatos=Candidatos.objects.filter(profesion=profesion_candidato)
+    return render(request,"appfinal/resultado_candidatos.html",{"candidatos":candidatos})
+    
+
+
 # Create your views here.
 # def lista_candidatos(request):
 #     candidatos = Candidatos.objects.all()

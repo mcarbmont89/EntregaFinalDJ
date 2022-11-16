@@ -1,0 +1,9 @@
+{% extends "appfinal/base.html"%} 
+{% block contenido %}
+<form action="{% url 'tt-candidatos-buscar-resultado'%}" method="get">
+  <p>
+    Profesion <input type="text" name="profesion" />
+    <input type="submit" value="Buscar!" />
+  </p>
+</form>
+{% endblock %}
