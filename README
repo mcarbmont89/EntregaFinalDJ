@@ -1,1 +1,15 @@
-#Proyecto Final de Coder
+#Proyecto Talento tech
+Para esta entrega trabajé con dos templates de bootstrap. 
+El de el index que es bastante sofisticado y para el que se tuvo que crear un directorio static.
+Se busca aprovechar las animaciones del template para dar una buena impresión en la landing.
+Luego se utilizó un template más sencillo, que sirve de base y que por medio de herencia se replicó en las páginas
+dedicadas a los 4 tipos de usuarios que tenemos
+Por otro lado, contamos con 4 clases de modelos. 
+-Candidatos: Aplican a puestos de trabajo publicados por reclutadores y recomendadores. 
+-Reclutadores: Trabajan dentro de Talento Tech entrevistando a los candidatos.
+-Recomendadores: Son reclutadores en general y recomiendan candidatos para las posiciones que publican los clientes.
+-Clientes: Son empresas interesadas en buscar un perfil para llenar una bacante.
+Contamos con 3 formularios: 
+- Alta clientes: es un formulario para registrar empresas en nuestra BD que está hecho en HTML.
+- Alta candidatos: sirve a los candidatos para compartir sus datos y ser contactados, el formulario es de tipo API.
+- Alta recomendadoress: sirve a los reclutadores externos para compartir sus datos y ser contactados por empresas que busquen sus servicios, el formulario es de tipo API.
