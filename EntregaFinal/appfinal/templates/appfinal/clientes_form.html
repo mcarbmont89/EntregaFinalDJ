@@ -1,0 +1,14 @@
+{% extends "appfinal/base.html" %}
+{% block contenido %} 
+<h1>Clientes</h1>
+<p>Hazte cliente</p>
+<form action="/talentotech/clientes/alta/" method="post">
+    {% csrf_token %}
+    <p>Nombre <input type="text" name="nombreempresa"></p>
+    <p>Descripcion <input type="text" name="descempresa"></p>
+    <p>Oferta Activa (0 o 1) <input type="text" name="ofertaactiva"></p>
+    <input type="submit" value="Enviar">
+</form>
+<a href="{%url 'tt-inicio'%}">Ir a inicio</a>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "appfinal/base.html" %}
+{% block contenido %} 
+<h1>Recomendadores</h1>
+<p>Recomienda nuestros servicios</p>
+<form action="" method="post">
+    {% csrf_token %}
+    
+    {{formulario.as_p}}
+
+    <input type="submit" value="Enviar">
+</form>
+<a href="{%url 'tt-inicio'%}">Ir a inicio</a>
+
+{% endblock %}

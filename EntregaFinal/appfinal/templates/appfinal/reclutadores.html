@@ -1,6 +1,18 @@
 {% extends "appfinal/base.html" %}
 {% block contenido %} 
 <h1>Reclutadores</h1>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+            {% for reclutador in reclutadores %}
+        <tr>
+                <td>{{reclutador.nombre}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
 <p>Estos son los candidatos</p>
 
 <a href="{%url 'tt-inicio'%}">Ir a inicio</a>
