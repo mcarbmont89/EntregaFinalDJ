@@ -13,5 +13,4 @@ Contamos con 3 formularios:
 - Alta clientes: es un formulario para registrar empresas en nuestra BD que está hecho en HTML.
 - Alta candidatos: sirve a los candidatos para compartir sus datos y ser contactados, el formulario es de tipo API.
 - Alta recomendadoress: sirve a los reclutadores externos para compartir sus datos y ser contactados por empresas que busquen sus servicios, el formulario es de tipo API.
-La barra de búsqueda está hecha para buscar candidatos por su profesión. Sin embarho al probarla devuelve este error:
-"GET /talentotech/candidatos/buscar/resultados/?profesion_candidato=Abogado HTTP/1.1" 500 66283
+La barra de búsqueda está hecha para buscar candidatos por su profesión. En la URL
