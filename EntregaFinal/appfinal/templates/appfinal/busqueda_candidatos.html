@@ -3,9 +3,9 @@
   <p>Profesion del candidato: <input type="text" name="profesion" /></p>
   <input type="submit" value="Buscar" />
 </form>
-{% if listado_candidato %}
+{% if listado_candidatos %}
 <ul>
-  {% for candidato in listado_candidato %}
+  {% for candidato in listado_candidatos %}
   <li>{{candidato.nombre}} {{candidato.apellido}}</li>
   {% endfor %}
 </ul>

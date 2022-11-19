@@ -55,10 +55,16 @@ def alta_clientes(request):
     
 def buscar_candidato(request):
     if request.GET:
-        candidatos=Candidatos.objects.filter(profesion__icontains=request.GET("profesion"))
-        return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":candidatos})
+        profesion = request.GET['profesion']
+        candidato= Candidatos.objects.filter(profesion__icontains=profesion)
+        return render(request, 'appfinal/busqueda_candidatos.html', {"listado_candidatos": candidato})
+    return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":[ ]})
 
-    return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":[]})
+    # if request.GET:
+    #     candidatos=Candidatos.objects.filter(profesion__icontains=request.GET("profesion"))
+    #     return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidatos":candidatos})
+
+    # return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":[]})
 
 
 # Create your views here.
