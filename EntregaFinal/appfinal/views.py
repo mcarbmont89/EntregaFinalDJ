@@ -56,9 +56,13 @@ def alta_clientes(request):
 def buscar_candidato(request):
     if request.GET:
         profesion = request.GET['profesion']
-        candidato= Candidatos.objects.filter(profesion__icontains=profesion)
-        return render(request, 'appfinal/busqueda_candidatos.html', {"listado_candidatos": candidato})
-    return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":[ ]})
+        if (profesion != ''):
+            candidato= Candidatos.objects.filter(profesion__icontains=profesion)
+            return render(request,'appfinal/busqueda_candidatos.html', {"listado_candidatos": candidato})
+        else:
+            return render(request,'appfinal/busqueda_candidatos.html', {"listado_candidato":[]})
+    else:
+        return render(request,"appfinal/busqueda_candidatos.html",{"listado_candidato":[]})
 
     # if request.GET:
     #     candidatos=Candidatos.objects.filter(profesion__icontains=request.GET("profesion"))
